@@ -352,3 +352,36 @@ ZSET：官方 了排序SET sortSet
 | zscore                                                       | 显示某一个元素的分数         |
 | zrem                                                         | 移除某一个元素               |
 | zincrby                                                      | 给某个特定元素加分           |
+
+
+
+### 8.5 hash类型
+
+
+
+#### 8.5.1 内存模型
+
+![img](https://cdn.nlark.com/yuque/0/2021/png/12759906/1632442000831-4119780b-1032-40f8-95d6-df593bd6a656.png)
+
+
+
+#### 8.5.2 常用命令
+
+| **命令**     | **说明**                |
+| ------------ | ----------------------- |
+| hset         | 设置一个key/value对     |
+| hget         | 获得一个key对应的value  |
+| hgetall      | 获得所有的key/value对   |
+| hdel         | 删除某一个key/value对   |
+| hexists      | 判断一个key是否存在     |
+| hkeys        | 获得所有的key           |
+| hvals        | 获得所有的value         |
+| hmset        | 设置多个key/value       |
+| hmget        | 获得多个key的value      |
+| hsetnx       | 设置一个不存在的key的值 |
+| hincrby      | 为value进行加法运算     |
+| hincrbyfloat | 为value加入浮点值       |
+
+
+
+## 9. 持久化机制
