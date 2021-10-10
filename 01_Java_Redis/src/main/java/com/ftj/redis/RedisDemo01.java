@@ -11,8 +11,7 @@ public class RedisDemo01 {
 
     public static void main(String[] args) {
         //1、创建jedis客户端对象
-        Jedis jedis = new Jedis("", 6379);
-        jedis.auth("");
+        Jedis jedis = new Jedis("127.0.0.1", 6379);
         //选择使用一个库，这一行不写，默认0号库
         jedis.select(0);
         Set<String> keys = jedis.keys("*");
