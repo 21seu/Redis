@@ -36,6 +36,7 @@ public class JedisDemo01 {
         Set<String> keys = jedis.keys("*");
         keys.forEach(k -> System.out.println(k));
 
+        jedis.close();
     }
 
     @Test
@@ -47,6 +48,8 @@ public class JedisDemo01 {
         System.out.println(name);
         //删除
         jedis.srem("names");
+
+        jedis.close();
     }
 
     @Test
@@ -55,6 +58,8 @@ public class JedisDemo01 {
         //hash
         jedis.hset("users", "age", "20");
         System.out.println(jedis.hget("users", "age"));//20
+
+        jedis.close();
     }
 
     @Test
@@ -63,5 +68,7 @@ public class JedisDemo01 {
         //zset
         jedis.zadd("china", 100d, "shanghai");
         System.out.println(jedis.zrange("china", 0, -1));//[shanghai]
+
+        jedis.close();
     }
 }
