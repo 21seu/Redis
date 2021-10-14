@@ -28,4 +28,11 @@ public class RedisDemo02 {
         }
         return code;
     }
+
+    /**
+     * 每个手机每天只能发送三次，验证码放到redis中，设置过期时间
+     */
+    public static void verify(){
+
+    }
 }
