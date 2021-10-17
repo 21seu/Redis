@@ -483,3 +483,9 @@ Redis官方提供了两种不同的持久化方法来将数据存储到硬盘里
 ### 9.2.2 开启AOF持久化
 
 在redis的默认配置中AOF持久化机制是没有开启的，需要在配置中开启 
+
+```markdown
+# 1.开启AOF持久化
+- a.修改 appendonly yes 开启持久化
+- b.修改 appendfilename "appendonly.aof" 指定生成文件名称
+```
