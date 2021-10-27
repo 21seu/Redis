@@ -534,3 +534,16 @@ AOF的方式也同时带来了另一个问题。持久化文件会变的越来�
 ### 9.3.2 AOF重写
 
 用来在一定程度上减小AOF文件的体积
+
+
+
+### 9.3.3 触发重写方式
+
+```markdown
+# 1.客户端方式触发重写
+- 执行BGREWRITEAOF命令  不会阻塞redis的服务
+
+# 2.服务器配置方式自动触发
+- 配置redis.conf中的auto-aof-rewrite-percentage选项 参加下图↓↓↓
+- 如果设置auto-aof-rewrite-percentage值为100和auto-aof-rewrite-min-size 64mb,并且启用的AOF持久化时,那么当AOF文件体积大于64M,并且AOF文件的体积比上一次重写之后体积大了至少一倍(100%)时,会自动触发,如果重写过于频繁,用户可以考虑将auto-aof-rewrite-percentage设置为更大
+```
