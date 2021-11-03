@@ -1,5 +1,6 @@
 package com.ftj.redis;
 
+import com.sun.deploy.util.StringUtils;
 import redis.clients.jedis.Jedis;
 
 import java.util.Random;
@@ -15,8 +16,9 @@ public class RedisDemo02 {
 
     public static void main(String[] args) {
         //模拟验证码发送
-        verify("15922881790");
+        //verify("15922881790");
 
+        getRedisCode("15922881790","729997");
     }
 
 
@@ -75,7 +77,7 @@ public class RedisDemo02 {
         //验证码key
         String codeKey = "VerifyCode" + phone + ":code";
         String redisCode = jedis.get(codeKey);
-        if (redisCode.equals(code)) {
+        if (redisCode != null && redisCode.equals(code)) {
             System.out.println("成功");
         } else {
             System.out.println("失败");
