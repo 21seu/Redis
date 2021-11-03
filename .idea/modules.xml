@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/01_Java_Redis/01_Java_Redis.iml" filepath="$PROJECT_DIR$/01_Java_Redis/01_Java_Redis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/02_SpringBoot_Redis/02_SpringBoot_Redis.iml" filepath="$PROJECT_DIR$/02_SpringBoot_Redis/02_SpringBoot_Redis.iml" />
       <module fileurl="file://$PROJECT_DIR$/Redis.iml" filepath="$PROJECT_DIR$/Redis.iml" />
     </modules>
   </component>

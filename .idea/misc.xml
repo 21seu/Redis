@@ -4,6 +4,7 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/01_Java_Redis/pom.xml" />
+        <option value="$PROJECT_DIR$/02_SpringBoot_Redis/pom.xml" />
       </list>
     </option>
   </component>
