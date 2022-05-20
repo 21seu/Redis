@@ -9,6 +9,13 @@ import java.util.Set;
  */
 public class RedisDemo01 {
 
+    public void demo04(){
+        Jedis jedis = new Jedis("127.0.0.1", 6379);
+        jedis.hset("hash1","userName","ftj");
+        System.out.println(jedis.hget("hash1","userName"));
+        jedis.close();
+    }
+
     public static void main(String[] args) {
         //1、创建jedis客户端对象
         Jedis jedis = new Jedis("127.0.0.1", 6379);
