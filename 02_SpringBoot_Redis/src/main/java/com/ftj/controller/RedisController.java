@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Map;
+
 /**
  * Created by fengtj on 2021/11/4 0:26
  */
@@ -39,7 +41,7 @@ public class RedisController {
         return user;
     }
 
-    @GetMapping
+    @GetMapping("redis03")
     public String testRedis03() throws JsonProcessingException {
         User user = new User(2L, "lzg", 25);
         //设置值 手动序列化
@@ -49,5 +51,13 @@ public class RedisController {
         //手动反序列化
         new ObjectMapper().readValue(val, User.class);
         return val;
+    }
+
+    @GetMapping("/redis04")
+    public Map testRedis04() throws JsonProcessingException {
+        stringRedisTemplate.opsForHash().put("user:003","name","fengtingjun");
+        stringRedisTemplate.opsForHash().put("user:003","age","21");
+        Map<Object, Object> entries = stringRedisTemplate.opsForHash().entries("user:003");
+        return entries;
     }
 }
